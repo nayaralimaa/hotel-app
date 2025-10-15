@@ -60,8 +60,6 @@ src/
 3. **Lista**: Visualize todas as reservas com opções para editar ou deletar
 4. **Ações**: Use os ícones para gerenciar suas reservas
 
-```
-
 ## 📚 Validações
 
 O formulário inclui validações para:
@@ -71,8 +69,3 @@ O formulário inclui validações para:
 - Email válido obrigatório
 - Número do quarto obrigatório
 
-
-
-## 📧 Suporte
-
-Para dúvidas ou sugestões, entre em contato através das issues do repositório.
