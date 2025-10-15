@@ -23,7 +23,7 @@ Uma plataforma moderna e intuitiva para gerenciar reservas de hotel com interfac
 1. Clone o repositório:
 ```bash
 git clone https://github.com/nayaralimaa/hotel-app.git
-cd hotel-reservation
+cd hotel-app
 ```
 
 2. Instale as dependências:
