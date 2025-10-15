@@ -1,59 +1,78 @@
-# HotelApp
+# 🏨 Hotel Reservation Platform
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.5.
+Uma plataforma moderna e intuitiva para gerenciar reservas de hotel com interface limpa e responsiva.
 
-## Development server
+## 📋 Funcionalidades
 
-To start a local development server, run:
+- ✅ **Criar Reservas** - Adicione novas reservas com dados do hóspede
+- ✅ **Listar Reservas** - Visualize todas as reservas em uma tabela organizada
+- ✅ **Editar Reservas** - Modifique informações de reservas existentes
+- ✅ **Deletar Reservas** - Remova reservas quando necessário
+- ✅ **Design Responsivo** - Funciona perfeitamente em desktop, tablet e mobile
 
+## 🛠️ Tecnologias
+
+- **Angular** - Framework frontend
+- **Bootstrap 5** - Framework CSS para design responsivo
+- **Bootstrap Icons** - Ícones vetoriais
+- **TypeScript** - Linguagem de programação
+- **Reactive Forms** - Validação de formulários
+
+## 📦 Instalação
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/nayaralimaa/hotel-app.git
+cd hotel-reservation
+```
+
+2. Instale as dependências:
+```bash
+npm install
+```
+
+3. Inicie o servidor de desenvolvimento:
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+4. Acesse a aplicação em `http://localhost:4200`
 
-## Code scaffolding
+## 📱 Estrutura do Projeto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── home/              # Tela inicial
+│   │   ├── reservation-list/  # Lista de reservas
+│   │   └── reservation-form/  # Formulário de reserva
+│   ├── services/
+│   │   └── reservation.service.ts  # Lógica de negócio
+│   └── models/
+│       └── reservation.model.ts    # Modelo de dados
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📝 Como Usar
 
-```bash
-ng generate --help
+1. **Na Home**: Clique em "Create a new reservation" para adicionar uma nova reserva
+2. **Formulário**: Preencha os dados do hóspede, datas e número do quarto
+3. **Lista**: Visualize todas as reservas com opções para editar ou deletar
+4. **Ações**: Use os ícones para gerenciar suas reservas
+
 ```
 
-## Building
+## 📚 Validações
 
-To build the project run:
+O formulário inclui validações para:
+- Data de check-in obrigatória
+- Data de check-out obrigatória
+- Nome do hóspede obrigatório
+- Email válido obrigatório
+- Número do quarto obrigatório
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
+## 📧 Suporte
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Para dúvidas ou sugestões, entre em contato através das issues do repositório.
