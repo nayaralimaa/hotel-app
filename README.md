@@ -48,9 +48,9 @@ src/
 │   │   ├── reservation-list/  # Lista de reservas
 │   │   └── reservation-form/  # Formulário de reserva
 │   ├── services/
-│   │   └── reservation.service.ts  # Lógica de negócio
+│   │   └── reservation.ts  # Lógica de negócio
 │   └── models/
-│       └── reservation.model.ts    # Modelo de dados
+│       └── reservation.ts    # Modelo de dados
 ```
 
 ## 📝 Como Usar
