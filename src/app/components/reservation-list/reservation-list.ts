@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Reservation } from '../../models/reservation';
-import { ReservationService } from '../../service/reservation';
+import { ReservationService } from '../../services/reservation';
 import { RouterLink } from '@angular/router';
-import { Home } from "../../home/home";
+import { Home } from "../../components/home/home";
 
 @Component({
   selector: 'app-reservation-list',

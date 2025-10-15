@@ -6,10 +6,10 @@ import {
   ReactiveFormsModule, 
   Validators
 } from '@angular/forms';
-import { ReservationService } from '../../service/reservation';
+import { ReservationService } from '../../services/reservation';
 import { Reservation } from '../../models/reservation';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Home } from "../../home/home";
+import { Home } from "../../components/home/home";
 
 @Component({
   selector: 'app-reservation-form',
