@@ -1,1 +1,57 @@
-<p>reservation-form works!</p>
+<app-home></app-home>
+
+<div class="container my-4">
+  <div class="card shadow-sm border-0 rounded-4">
+    <div class="card-body p-4">
+      <h4 class="mb-4 fw-light text-center">Reservation Form</h4>
+
+      <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()" class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Check-in date</label>
+          <input type="date" class="form-control" formControlName="checkInDate" />
+          @if(reservationForm.get('checkInDate')?.touched && reservationForm.get('checkInDate')?.invalid) {
+            <div class="text-danger small mt-1">Check-in date is required.</div>
+          }
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Check-out date</label>
+          <input type="date" class="form-control" formControlName="checkOutDate" />
+          @if(reservationForm.get('checkOutDate')?.touched && reservationForm.get('checkOutDate')?.invalid) {
+            <div class="text-danger small mt-1">Check-out date is required.</div>
+          }
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Guest name</label>
+          <input type="text" class="form-control" formControlName="guestName" placeholder="John Doe" />
+          @if(reservationForm.get('guestName')?.touched && reservationForm.get('guestName')?.invalid) {
+            <div class="text-danger small mt-1">Guest name is required.</div>
+          }
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Guest email</label>
+          <input type="email" class="form-control" formControlName="guestEmail" placeholder="guest@example.com" />
+          @if(reservationForm.get('guestEmail')?.touched && reservationForm.get('guestEmail')?.invalid) {
+            <div class="text-danger small mt-1">Guest email is required.</div>
+          }
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Room number</label>
+          <input type="number" class="form-control" formControlName="roomNumber" placeholder="101" />
+          @if(reservationForm.get('roomNumber')?.touched && reservationForm.get('roomNumber')?.invalid) {
+            <div class="text-danger small mt-1">Room number is required.</div>
+          }
+        </div>
+
+        <div class="col-12 text-center mt-4">
+          <button type="submit" class="btn btn-success px-5" [disabled]="reservationForm.invalid">
+            <i class="bi bi-check-circle me-2"></i>Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

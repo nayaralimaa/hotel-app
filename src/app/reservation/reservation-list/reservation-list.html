@@ -1,1 +1,57 @@
-<p>reservation-list works!</p>
+<app-home></app-home>
+
+<div class="container my-5">
+  <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+    <div class="card-header bg-white border-0 py-3">
+      <h4 class="fw-light text-center mb-0">Reservation List</h4>
+    </div>
+
+    <div class="card-body p-4">
+      @if(reservations.length) {
+        <div class="table-responsive">
+          <table class="table align-middle mb-0">
+            <thead class="table-light">
+              <tr>
+                <th>Guest</th>
+                <th>Email</th>
+                <th>Room</th>
+                <th>Check-in</th>
+                <th>Check-out</th>
+                <th class="text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for(reservation of reservations; track $index) {
+                <tr>
+                  <td class="fw-semibold">{{ reservation.guestName }}</td>
+                  <td>{{ reservation.guestEmail }}</td>
+                  <td>{{ reservation.roomNumber }}</td>
+                  <td>{{ reservation.checkInDate }}</td>
+                  <td>{{ reservation.checkOutDate }}</td>
+                  <td class="text-center">
+                    <button
+                      class="btn btn-sm btn-outline-danger me-1"
+                      (click)="deleteReservation(reservation.id)"
+                      title="Delete"
+                    >
+                      <i class="bi bi-trash"></i>
+                    </button>
+                    <button
+                      class="btn btn-sm btn-outline-primary"
+                      [routerLink]="['/edit', reservation.id]"
+                      title="Edit"
+                    >
+                      <i class="bi bi-pencil"></i>
+                    </button>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      } @else {
+        <p class="text-center text-muted mt-4">No reservation available.</p>
+      }
+    </div>
+  </div>
+</div>
