@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { 
   FormBuilder, 
   FormGroup, 
@@ -19,11 +19,12 @@ import { Home } from "../../components/home/home";
 })
 export class ReservationForm implements OnInit {
   reservationForm: FormGroup = new FormGroup({});
+  reservationService = inject(ReservationService);
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private formBuilder: FormBuilder,
-    private reservationService: ReservationService,
+    //private reservationService: ReservationService,
     private router: Router
   ) {}
 
